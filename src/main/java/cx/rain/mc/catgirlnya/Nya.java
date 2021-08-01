@@ -1,6 +1,9 @@
 package cx.rain.mc.catgirlnya;
 
+import cx.rain.mc.catgirlnya.item.ModItems;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,6 +17,9 @@ public class Nya {
 
     public Nya() {
         INSTANCE = this;
+
+        var bus = FMLJavaModLoadingContext.get().getModEventBus();
+        new ModItems(bus);
     }
 
     public static Nya getInstance() {
