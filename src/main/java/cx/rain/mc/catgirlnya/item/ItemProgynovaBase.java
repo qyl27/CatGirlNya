@@ -41,7 +41,8 @@ public class ItemProgynovaBase extends Item {
         stack.shrink(1);
 
         var emptyBox = new ItemStack(ModItems.PROGYNOVA.get());
+        emptyBox.setDamageValue(1);
         player.addItem(emptyBox);
-        return super.use(world, player, hand);
+        return InteractionResultHolder.success(stack);
     }
 }

@@ -3,17 +3,18 @@ package cx.rain.mc.catgirlnya.group;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class ItemGroups extends CreativeModeTab {
-    private Item icon;
+    private RegistryObject<Item> icon;
 
-    public ItemGroups(String label, Item iconIn) {
+    public ItemGroups(String label, RegistryObject<Item> iconIn) {
         super(label);
         icon = iconIn;
     }
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(icon);
+        return new ItemStack(icon.get());
     }
 }
