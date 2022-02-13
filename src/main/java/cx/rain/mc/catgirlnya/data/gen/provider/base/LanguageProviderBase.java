@@ -5,7 +5,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 
 public abstract class LanguageProviderBase extends LanguageProvider {
     public LanguageProviderBase(DataGenerator gen, String modid, String locale) {

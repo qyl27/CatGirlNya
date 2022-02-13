@@ -20,9 +20,10 @@ public class ItemProgynovaBase extends Item {
     public ItemProgynovaBase() {
         super(new Properties()
                 .setNoRepair()
-                .defaultDurability(1)
-                .durability(1)
-                .tab(ModItemGroups.CAT_GIRL));
+//                .defaultDurability(1)
+//                .durability(1)
+                .tab(ModItemGroups.CAT_GIRL)
+                .food(new FoodProperties.Builder().build()));
     }
 
     @Override
@@ -35,14 +36,14 @@ public class ItemProgynovaBase extends Item {
         }
     }
 
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
-        var stack = player.getItemInHand(hand);
-        stack.shrink(1);
-
-        var emptyBox = new ItemStack(ModItems.PROGYNOVA.get());
-        emptyBox.setDamageValue(1);
-        player.addItem(emptyBox);
-        return InteractionResultHolder.success(stack);
-    }
+//    @Override
+//    public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
+//        var stack = player.getItemInHand(hand);
+//        stack.shrink(1);
+//
+//        var emptyBox = new ItemStack(ModItems.PROGYNOVA.get());
+//        emptyBox.setDamageValue(1);
+//        player.addItem(emptyBox);
+//        return InteractionResultHolder.success(stack);
+//    }
 }

@@ -15,7 +15,7 @@ public class LanguageProviderZHCN extends LanguageProviderBase {
     protected void addTranslations() {
         addItem(ModItems.PROGYNOVA, "戊酸雌二醇片（国产）");
         addTooltip(ModItems.PROGYNOVA, 1, "又名补佳乐，");
-        addTooltip(ModItems.PROGYNOVA, 2, "右键拆开。");
+        addTooltip(ModItems.PROGYNOVA, 2, "右键吃下。");
 
         addItemGroup(ModItemGroups.CAT_GIRL, "猫娘Nya~");
     }
