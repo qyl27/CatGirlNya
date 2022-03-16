@@ -17,6 +17,9 @@ public class LanguageProviderZHCN extends LanguageProviderBase {
         addTooltip(ModItems.PROGYNOVA, 1, "又名补佳乐，");
         addTooltip(ModItems.PROGYNOVA, 2, "右键吃下。");
 
+        // todo 这是个啥图案？
+        addItem(ModItems.PRIDE_BANNER_PATTERN, "某种旗子图案");
+
         addItemGroup(ModItemGroups.CAT_GIRL, "猫娘Nya~");
     }
 }
