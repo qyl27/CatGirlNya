@@ -6,18 +6,18 @@ import cx.rain.mc.catgirlnya.group.ModItemGroups;
 import cx.rain.mc.catgirlnya.item.ModItems;
 import net.minecraft.data.DataGenerator;
 
-public class LanguageProviderZHCN extends LanguageProviderBase {
-    public LanguageProviderZHCN(DataGenerator gen) {
-        super(gen, Nya.MODID, "zh_cn");
+public class LanguageProviderENUS extends LanguageProviderBase {
+    public LanguageProviderENUS(DataGenerator gen) {
+        super(gen, Nya.MODID, "en_us");
     }
 
     @Override
     protected void addTranslations() {
-        addItem(ModItems.PROXYNEVA, "补佳洛（国产）");
-        addTooltip(ModItems.PROXYNEVA, 1, "6", "右键拆开。");
+        addItem(ModItems.PROXYNEVA, "Proxyneva");
+        addTooltip(ModItems.PROXYNEVA, 1, "6", "Right click it.");
         addTooltip(ModItems.PROXYNEVA, 2, "", "");
-        addTooltip(ModItems.PROXYNEVA, 3, "7", "请勿食用包装！");
+        addTooltip(ModItems.PROXYNEVA, 3, "7", "Do not eat the box!");
 
-        addItemGroup(ModItemGroups.CAT_GIRL, "猫娘Nya~");
+        addItemGroup(ModItemGroups.CAT_GIRL, "Cat girl Nya~");
     }
 }

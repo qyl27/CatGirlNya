@@ -13,6 +13,6 @@ public class ModItemModelProvider extends ItemModelProviderBase {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.PROGYNOVA.get());
+//        simpleItem(ModItems.PROGYNOVA.get());
     }
 }

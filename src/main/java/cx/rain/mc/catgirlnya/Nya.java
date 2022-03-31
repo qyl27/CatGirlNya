@@ -20,6 +20,8 @@ public class Nya {
 
         var bus = FMLJavaModLoadingContext.get().getModEventBus();
         new ModItems(bus);
+
+        logger.info("Cat nya nya~");
     }
 
     public static Nya getInstance() {

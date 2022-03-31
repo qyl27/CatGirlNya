@@ -2,6 +2,7 @@ package cx.rain.mc.catgirlnya.data.gen;
 
 import cx.rain.mc.catgirlnya.Nya;
 import cx.rain.mc.catgirlnya.data.gen.provider.ModItemModelProvider;
+import cx.rain.mc.catgirlnya.data.gen.provider.language.LanguageProviderENUS;
 import cx.rain.mc.catgirlnya.data.gen.provider.language.LanguageProviderZHCN;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -22,6 +23,7 @@ public class DataGen {
 
         if (event.includeServer()) {
             generator.addProvider(new LanguageProviderZHCN(generator));
+            generator.addProvider(new LanguageProviderENUS(generator));
         }
     }
 }

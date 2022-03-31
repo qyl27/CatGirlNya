@@ -17,7 +17,11 @@ public abstract class LanguageProviderBase extends LanguageProvider {
     }
 
     public void addTooltip(RegistryObject<? extends Item> item, int line, String tooltip) {
+        addTooltip(item, line, "7", tooltip);
+    }
+
+    public void addTooltip(RegistryObject<? extends Item> item, int line, String colorCode, String tooltip) {
         String name = item.getId().getPath();
-        add("tooltip." + name + "." + line, tooltip);
+        add("tooltip." + name + "." + line, "§" + colorCode + tooltip);
     }
 }

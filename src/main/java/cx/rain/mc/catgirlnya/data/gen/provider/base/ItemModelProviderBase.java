@@ -22,7 +22,7 @@ public abstract class ItemModelProviderBase extends ItemModelProvider {
     }
 
     protected void simpleItem(Item item) {
-        simpleItem(item, modLoc("item/" + item.getRegistryName().getPath()));
+        simpleItem(item, modLoc("assets/catgirlnya/models/item/" + item.getRegistryName().getPath()));
     }
 
     protected void simpleBlockItem(BlockItem blockItem) {

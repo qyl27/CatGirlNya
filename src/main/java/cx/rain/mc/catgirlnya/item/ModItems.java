@@ -17,5 +17,5 @@ public class ModItems {
     }
 
     // Items below.
-    public static final RegistryObject<Item> PROGYNOVA = ITEMS.register("progynova", () -> new ItemProgynovaBase());
+    public static final RegistryObject<Item> PROXYNEVA = ITEMS.register("proxyneva", () -> new ItemProxynevaBase());
 }

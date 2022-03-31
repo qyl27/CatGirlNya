@@ -4,9 +4,6 @@ import cx.rain.mc.catgirlnya.group.ModItemGroups;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -16,8 +13,8 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ItemProgynovaBase extends Item {
-    public ItemProgynovaBase() {
+public class ItemProxynevaBase extends Item {
+    public ItemProxynevaBase() {
         super(new Properties()
                 .setNoRepair()
 //                .defaultDurability(1)
@@ -31,8 +28,8 @@ public class ItemProgynovaBase extends Item {
                                 List<Component> list, TooltipFlag flag) {
         super.appendHoverText(stack, world, list, flag);
 
-        for (int i = 1; i <= 2; i++) {
-            list.add(new TranslatableComponent("tooltip." + getRegistryName().getPath() + "." + i).withStyle(ChatFormatting.AQUA));
+        for (int i = 1; i <= 3; i++) {
+            list.add(new TranslatableComponent("tooltip." + getRegistryName().getPath() + "." + i));
         }
     }
 
