@@ -2,10 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "catgirlnya:item/proxyneva_main",
-		"1": "catgirlnya:item/proxyneva_side_1",
-		"2": "catgirlnya:item/proxyneva_side_2",
-		"particle": "catgirlnya:item/proxyneva_main"
+		"0": "catgirlnya:items/proxyneva_main",
+		"1": "catgirlnya:items/proxyneva_side_1",
+		"2": "catgirlnya:items/proxyneva_side_2",
+		"particle": "catgirlnya:items/proxyneva_main"
 	},
 	"elements": [
 		{
