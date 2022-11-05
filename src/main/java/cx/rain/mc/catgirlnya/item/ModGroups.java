@@ -1,14 +1,16 @@
-package cx.rain.mc.catgirlnya.group;
+package cx.rain.mc.catgirlnya.item;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ItemGroups extends CreativeModeTab {
+public class ModGroups extends CreativeModeTab {
+    public static final CreativeModeTab CAT_GIRL = new ModGroups("cat_girl", ModItems.PROXYNEVA);
+
     private RegistryObject<Item> icon;
 
-    public ItemGroups(String label, RegistryObject<Item> iconIn) {
+    public ModGroups(String label, RegistryObject<Item> iconIn) {
         super(label);
         icon = iconIn;
     }

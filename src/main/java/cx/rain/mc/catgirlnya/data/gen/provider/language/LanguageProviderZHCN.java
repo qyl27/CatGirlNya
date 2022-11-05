@@ -2,7 +2,7 @@ package cx.rain.mc.catgirlnya.data.gen.provider.language;
 
 import cx.rain.mc.catgirlnya.Nya;
 import cx.rain.mc.catgirlnya.data.gen.provider.base.LanguageProviderBase;
-import cx.rain.mc.catgirlnya.group.ModItemGroups;
+import cx.rain.mc.catgirlnya.item.ModGroups;
 import cx.rain.mc.catgirlnya.item.ModItems;
 import net.minecraft.data.DataGenerator;
 
@@ -18,6 +18,6 @@ public class LanguageProviderZHCN extends LanguageProviderBase {
         addTooltip(ModItems.PROXYNEVA, 2, "", "");
         addTooltip(ModItems.PROXYNEVA, 3, "7", "请勿食用包装！");
 
-        addItemGroup(ModItemGroups.CAT_GIRL, "猫娘Nya~");
+        addItemGroup(ModGroups.CAT_GIRL, "猫娘Nya~");
     }
 }

@@ -1,7 +1,6 @@
 package cx.rain.mc.catgirlnya.data.gen.provider.base;
 
 import net.minecraft.data.DataGenerator;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -13,7 +12,7 @@ public abstract class LanguageProviderBase extends LanguageProvider {
     }
 
     public void addItemGroup(CreativeModeTab group, String name) {
-        add(((TranslatableComponent) group.getDisplayName()).getKey(), name);
+        add(group.langId, name);
     }
 
     public void addTooltip(RegistryObject<? extends Item> item, int line, String tooltip) {

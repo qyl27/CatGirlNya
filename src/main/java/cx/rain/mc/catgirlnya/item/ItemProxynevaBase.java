@@ -1,9 +1,7 @@
 package cx.rain.mc.catgirlnya.item;
 
-import cx.rain.mc.catgirlnya.group.ModItemGroups;
-import net.minecraft.ChatFormatting;
+import cx.rain.mc.catgirlnya.utility.RegistryNameHelper;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,7 +17,7 @@ public class ItemProxynevaBase extends Item {
                 .setNoRepair()
 //                .defaultDurability(1)
 //                .durability(1)
-                .tab(ModItemGroups.CAT_GIRL)
+                .tab(ModGroups.CAT_GIRL)
                 .food(new FoodProperties.Builder().build()));
     }
 
@@ -29,7 +27,7 @@ public class ItemProxynevaBase extends Item {
         super.appendHoverText(stack, world, list, flag);
 
         for (int i = 1; i <= 3; i++) {
-            list.add(new TranslatableComponent("tooltip." + getRegistryName().getPath() + "." + i));
+            list.add(Component.translatable("tooltip." + RegistryNameHelper.getItemRegistryName(this).getPath() + "." + i));
         }
     }
 
@@ -44,3 +42,4 @@ public class ItemProxynevaBase extends Item {
 //        return InteractionResultHolder.success(stack);
 //    }
 }
+

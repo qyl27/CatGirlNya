@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public abstract class ItemModelProviderBase extends ItemModelProvider {
     public ItemModelProviderBase(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
@@ -18,15 +19,19 @@ public abstract class ItemModelProviderBase extends ItemModelProvider {
     }
 
     protected void simpleItem(Item item, ResourceLocation texture) {
-        singleTexture(item.getRegistryName().getPath(), mcLoc("generated"), "layer0", texture);
+        singleTexture(locFromItem(item).getPath(), mcLoc("generated"), "layer0", texture);
     }
 
     protected void simpleItem(Item item) {
-        simpleItem(item, modLoc("assets/catgirlnya/models/item/" + item.getRegistryName().getPath()));
+        simpleItem(item, modLoc("assets/catgirlnya/models/item/" + locFromItem(item).getPath()));
     }
 
     protected void simpleBlockItem(BlockItem blockItem) {
-        getBuilder(blockItem.getRegistryName().getPath())
-                .parent(getModel("block/" + blockItem.getRegistryName().getPath()));
+        var path = locFromItem(blockItem).getPath();
+        getBuilder(path).parent(getModel("block/" + path));
+    }
+
+    protected ResourceLocation locFromItem(Item item) {
+        return ForgeRegistries.ITEMS.getKey(item);
     }
 }
