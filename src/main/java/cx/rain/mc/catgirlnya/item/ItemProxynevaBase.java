@@ -17,7 +17,6 @@ public class ItemProxynevaBase extends Item {
                 .setNoRepair()
 //                .defaultDurability(1)
 //                .durability(1)
-                .tab(ModGroups.CAT_GIRL)
                 .food(new FoodProperties.Builder().build()));
     }
 
@@ -36,7 +35,7 @@ public class ItemProxynevaBase extends Item {
 //        var stack = player.getItemInHand(hand);
 //        stack.shrink(1);
 //
-//        var emptyBox = new ItemStack(ModItems.PROGYNOVA.get());
+//        var emptyBox = new ItemStack(ModItems.PROXYNEVA.get());
 //        emptyBox.setDamageValue(1);
 //        player.addItem(emptyBox);
 //        return InteractionResultHolder.success(stack);

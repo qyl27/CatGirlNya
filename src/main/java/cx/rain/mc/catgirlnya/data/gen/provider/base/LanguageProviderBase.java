@@ -1,18 +1,15 @@
 package cx.rain.mc.catgirlnya.data.gen.provider.base;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.CreativeModeTab;
+import cx.rain.mc.catgirlnya.item.tab.ModTabs;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
 
 public abstract class LanguageProviderBase extends LanguageProvider {
-    public LanguageProviderBase(DataGenerator gen, String modid, String locale) {
-        super(gen, modid, locale);
-    }
-
-    public void addItemGroup(CreativeModeTab group, String name) {
-        add(group.langId, name);
+    public LanguageProviderBase(PackOutput output, String modid, String locale) {
+        super(output, modid, locale);
     }
 
     public void addTooltip(RegistryObject<? extends Item> item, int line, String tooltip) {
@@ -22,5 +19,9 @@ public abstract class LanguageProviderBase extends LanguageProvider {
     public void addTooltip(RegistryObject<? extends Item> item, int line, String colorCode, String tooltip) {
         String name = item.getId().getPath();
         add("tooltip." + name + "." + line, "§" + colorCode + tooltip);
+    }
+
+    public void addItemGroup(ResourceLocation location, String name) {
+        add(ModTabs.makeTranslateKey(location), name);
     }
 }

@@ -14,16 +14,17 @@ import net.minecraftforge.fml.common.Mod;
 public class DataGen {
     @SubscribeEvent
     public static void onGatherData(GatherDataEvent event) {
-        DataGenerator generator = event.getGenerator();
-        ExistingFileHelper exHelper = event.getExistingFileHelper();
+        var generator = event.getGenerator();
+        var exHelper = event.getExistingFileHelper();
+        var output = generator.getPackOutput();
 
         if (event.includeClient()) {
-            generator.addProvider(true, new ModItemModelProvider(generator, exHelper));
+            generator.addProvider(true, new ModItemModelProvider(output, exHelper));
         }
 
         if (event.includeServer()) {
-            generator.addProvider(true, new LanguageProviderZHCN(generator));
-            generator.addProvider(true, new LanguageProviderENUS(generator));
+            generator.addProvider(true, new LanguageProviderZHCN(output));
+            generator.addProvider(true, new LanguageProviderENUS(output));
         }
     }
 }

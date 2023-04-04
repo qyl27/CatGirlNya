@@ -1,6 +1,6 @@
 package cx.rain.mc.catgirlnya.data.gen.provider.base;
 
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public abstract class ItemModelProviderBase extends ItemModelProvider {
-    public ItemModelProviderBase(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper) {
-        super(generator, modid, existingFileHelper);
+    public ItemModelProviderBase(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
+        super(output, modid, existingFileHelper);
     }
 
     private ModelFile getModel(String loc) {
