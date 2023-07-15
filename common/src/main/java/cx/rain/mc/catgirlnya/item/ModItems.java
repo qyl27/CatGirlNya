@@ -14,4 +14,5 @@ public class ModItems {
     }
 
     public static final RegistrySupplier<Item> BLAHAJ = ITEMS.register("blahaj", BlahajItem::new);
+    public static final RegistrySupplier<Item> PROXYNEVA = ITEMS.register("proxyneva", ProxynevaItem::new);
 }

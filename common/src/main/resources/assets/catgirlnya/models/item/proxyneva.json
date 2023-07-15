@@ -1,0 +1,59 @@
+{
+    "credit": "Made with Blockbench",
+    "texture_size": [64, 64],
+    "textures": {
+        "0": "catgirlnya:item/proxyneva_main",
+        "1": "catgirlnya:item/proxyneva_side_1",
+        "2": "catgirlnya:item/proxyneva_side_2",
+        "particle": "#0"
+    },
+    "elements": [
+        {
+            "from": [0, 0, 0],
+            "to": [4, 16, 16],
+            "faces": {
+                "north": {"uv": [0, 0, 4, 16], "texture": "#1"},
+                "east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                "south": {"uv": [0, 0, 4, 16], "texture": "#2"},
+                "west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                "up": {"uv": [4, 16, 0, 0], "texture": "#1"},
+                "down": {"uv": [4, 0, 0, 16], "texture": "#1"}
+            }
+        }
+    ],
+    "display": {
+        "thirdperson_righthand": {
+            "translation": [1, 0, 0],
+            "scale": [0.2, 0.2, 0.2]
+        },
+        "thirdperson_lefthand": {
+            "translation": [-1, 0, 0],
+            "scale": [0.2, 0.2, 0.2]
+        },
+        "firstperson_righthand": {
+            "translation": [1, 0, 0],
+            "scale": [0.2, 0.2, 0.2]
+        },
+        "firstperson_lefthand": {
+            "translation": [-1, 0, 0],
+            "scale": [0.2, 0.2, 0.2]
+        },
+        "ground": {
+            "translation": [2, 0, 0],
+            "scale": [0.4, 0.4, 0.4]
+        },
+        "gui": {
+            "rotation": [30, -120, 0],
+            "translation": [-2, -2, 0],
+            "scale": [0.6, 0.6, 0.6]
+        },
+        "head": {
+            "scale": [0.2, 0.2, 0]
+        },
+        "fixed": {
+            "rotation": [0, -90, 0],
+            "translation": [0, 0, 3],
+            "scale": [0.8, 0.8, 0.8]
+        }
+    }
+}
